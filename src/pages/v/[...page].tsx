@@ -57,11 +57,11 @@ export default function Page() {
         <h1 className="ml-6">{title}</h1>
         {loading ? (
           // 로딩 중일 때 로딩 화면을 표시
-          <p>로드중...</p>
+          <p className="ml-6">몇초뒤에 표시됩니다.</p>
         ) : (
           // 로딩이 완료되면 Markdown 내용을 표시
           <div className="markdown">
-            <ReactMarkdown className="markdown">{description}</ReactMarkdown>
+            <ReactMarkdown>{description}</ReactMarkdown>
           </div>
         )}
         <br />
