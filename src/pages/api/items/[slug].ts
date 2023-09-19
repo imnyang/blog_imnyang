@@ -7,7 +7,7 @@ const pool = new Pool({
   host: process.env.NEXT_PUBLIC_DBHOST,
   database: process.env.NEXT_PUBLIC_DBNAME,
   password: process.env.NEXT_PUBLIC_DBPASSWORD,
-  port: process.env.NEXT_PUBLIC_DBPORT, // PostgreSQL 포트
+  port: parseInt(process.env.NEXT_PUBLIC_DBPORT || '5432'), // PostgreSQL 포트
 });
 
 export default async function handler(
