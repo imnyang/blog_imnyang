@@ -2,26 +2,90 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    font-family: 'omyu_pretty';
+    margin: 0; /* 기본 마진 제거 */
+    flex-wrap: wrap;
+}
+
+.par_box {
+    background-color: '#EFF3F4';
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 650px;
+    height: 350px;
+    background: rgba(255, 255, 255, 1);
+    border: 2px solid #EFF3F4;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* 내부 요소를 세로로 정렬하기 위해 추가 */
+    flex-wrap: wrap;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); /* 그림자 색상 및 크기 조정 가능 */
+}
+
+.box p {
+    white-space: normal;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    margin-left: 25px;
+}
+
+.name {
+    height: 64px;
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    /*align-items: center; /* 세로 중앙 정렬을 위해 추가 */
+}
+
+.name img {
+    margin-left: 25px;
+    border-radius: 50%; /* 원 모양 이미지로 만들기 위해 수정 */
+    height: 48px;
+    width: 48px;
+}
+
+a{
+    flex-wrap: wrap;
+    white-space: normal;
+    margin-top: 5px;
+    color: black;
+    text-decoration: none;
+
+}
+
+a:link {
+    color: black;
+    text-decoration: none;
+}
+
+a:active {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: black;
+    text-decoration: none;
 }

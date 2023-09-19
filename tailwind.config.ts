@@ -15,6 +15,10 @@ const config: Config = {
       },
     },
   },
+  // Preflight를 비활성화합니다.
+  corePlugins: {
+    preflight: false,
+  },
   plugins: [],
 }
 export default config
