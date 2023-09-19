@@ -6,8 +6,13 @@ import ReactMarkdown from 'react-markdown';
 
 export default function Page() {
   const router = useRouter();
-  const pageArray = router.query.page || []; // 쿼리 매개변수가 배열로 반환되는 경우 고려
-  const page = pageArray[0] || ''; // 0번 인덱스에 있는 값을 가져오며, 값이 없을 경우 빈 문자열로 설정
+  const queries = router.query;
+  const pageParam = queries.page || '';
+
+  useEffect(() => {
+    if (!router.isReady) return;
+    console.log(pageParam, 'Let\'s Go!');
+  }, [router.isReady]);
 
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -17,7 +22,7 @@ export default function Page() {
   useEffect(() => {
     // 여기서 데이터를 가져오는 API 요청을 수행하고 값을 설정합니다.
     // 예를 들어, /api/items/slub 경로로 API 요청을 보내고 결과를 받아온다고 가정합니다.
-    fetch(`/api/items/${page}`)
+    fetch(`/api/items/${pageParam}`)
       .then(response => response.json())
       .then(data => {
         // API에서 받아온 데이터를 사용해 값을 설정합니다.
@@ -29,7 +34,7 @@ export default function Page() {
       .catch(error => {
         console.error('API 요청 실패:', error);
       });
-  }, []);
+  }, [pageParam]);
 
   return (
     <main className="par_box">
@@ -39,7 +44,7 @@ export default function Page() {
           <div>
             <a className="h-1 ml-4 text-xl" href="https://twitter.com/im_se_mir">{`세미르 💕`}</a><br />
             <a className="h-1 ml-4 text-sm text-gray-200" href="https://twitter.com/im_se_mir">{`@im_se_mir`}</a><br />
-            <p className="h-1 text-sm text-gray-400">{router.query.page}</p>
+            <p className="h-1 text-sm text-gray-400">{pageParam}</p>
           </div>
         </div>
         <br /><br />
