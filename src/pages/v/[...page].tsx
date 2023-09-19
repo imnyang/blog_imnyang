@@ -61,7 +61,7 @@ export default function Page() {
         ) : (
           // 로딩이 완료되면 Markdown 내용을 표시
           <div className="markdown">
-            <ReactMarkdown className="markdown">{description}</ReactMarkdown>
+            <ReactMarkdown>{description}</ReactMarkdown>
           </div>
         )}
         <br />
