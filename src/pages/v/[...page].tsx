@@ -9,7 +9,7 @@ export default function Page() {
   useEffect(() => {
     if (router.isReady) {
       // Code using query
-      console.log(router.query);
+      console.log(router.query.page[0]);
     }
   }, [router.isReady]);
 
