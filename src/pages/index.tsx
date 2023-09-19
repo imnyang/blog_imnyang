@@ -11,11 +11,12 @@ export default function Home() {
         </div>
         <p>아임냥의 잡다한 작업실입니다.</p>
         <p>보통 헛소리나 정보 관련쪽으로 올라옵니다.</p>
+        <p>헉 헛소리 쓸게 떨어졌어요...</p>
         <br />
         <a className="ml-6" href="mailto:se.mir@imnyang.xyz">se.mir@imnyang.xyz</a>
         <br />
         <p>@imnyang</p>
-        <br /><br /><br /><br /><br />
+        <br /><br /><br />
         <p className="text-gray-400">Now · Post in localhost</p>
       </div>
     </main>

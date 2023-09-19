@@ -46,12 +46,36 @@ body {
     margin-left: 25px;
 }
 
+.box2 {
+    width: 650px;
+    background: rgba(255, 255, 255, 1);
+    border: 2px solid #EFF3F4;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    text-align: left;
+    display: flex;
+    flex-direction: column; /* 내부 요소를 세로로 정렬하기 위해 추가 */
+    flex-wrap: wrap;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); /* 그림자 색상 및 크기 조정 가능 */
+}
+
+.box2 p {
+    white-space: normal;
+    flex-wrap: wrap;
+    margin-top: 0px;
+    margin-left: 25px;
+}
+
 .name {
     height: 64px;
     padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
     /*align-items: center; /* 세로 중앙 정렬을 위해 추가 */
+}
+
+.name p {
+    margin-left: 17px;
 }
 
 .name img {
