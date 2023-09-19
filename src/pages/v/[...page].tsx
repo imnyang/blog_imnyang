@@ -60,8 +60,8 @@ export default function Page() {
           <p className="ml-6">몇초뒤에 표시됩니다.</p>
         ) : (
           // 로딩이 완료되면 Markdown 내용을 표시
-          <div className="markdown">
-            <ReactMarkdown>{description}</ReactMarkdown>
+          <div>
+            <ReactMarkdown className="markdown">{description}</ReactMarkdown>
           </div>
         )}
         <br />
