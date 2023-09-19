@@ -61,11 +61,11 @@ export default function Page() {
         ) : (
           // 로딩이 완료되면 Markdown 내용을 표시
           <div className="markdown">
-            <ReactMarkdown>{description}</ReactMarkdown>
+            <ReactMarkdown className="markdown">{description}</ReactMarkdown>
           </div>
         )}
         <br />
-        <p className="text-gray-400">{`Date: ${date} - Time: ${time} · Post in localhost`}</p>
+        <p className="ml-6 text-gray-400">{`Date: ${date} - Time: ${time} · Post in localhost`}</p>
       </div>
     </main >
   );
