@@ -6,6 +6,12 @@ import ReactMarkdown from 'react-markdown';
 
 export default function Page() {
   const router = useRouter();
+  const queries = router.query;
+
+  useEffect(() => {
+    if (!router.isReady) return;
+    console.log(queries, '🙆‍♀️ 콘솔에 쿼리 찍힘!')
+  }, [router.isReady])
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [date, setDate] = useState('');
