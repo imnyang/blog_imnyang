@@ -48,13 +48,13 @@ export default function Page() {
           </div>
         </div>
         <br /><br />
-        <h1>{title}</h1>
+        <h1 className="ml-6">{title}</h1>
         <div className="markdown">
           <ReactMarkdown>{description}</ReactMarkdown>
         </div>
         <br />
         <p className="text-gray-400">{`Date: ${date} - Time: ${time} · Post in localhost`}</p>
       </div>
-    </main>
+    </main >
   );
 }
