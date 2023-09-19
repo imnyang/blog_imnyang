@@ -114,17 +114,6 @@ a:visited {
     text-decoration: none;
 }
 
-.markdown h1 {
-    margin-left: 25px;
-}
-
-.markdown h2 {
-    margin-left: 25px;
-}
-.markdown h3 {
-    margin-left: 25px;
-}
-
-.markdown a p {
-    margin-left: 25px;
+.markdown {
+    padding-left: 25px;
 }
