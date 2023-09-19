@@ -53,7 +53,7 @@ export default function Page() {
             <p className="h-1 text-sm text-gray-400">{pageParam}</p>
           </div>
         </div>
-        <br /><br />
+        <br />
         <h1 className="ml-6">{title}</h1>
         {loading ? (
           // 로딩 중일 때 로딩 화면을 표시
