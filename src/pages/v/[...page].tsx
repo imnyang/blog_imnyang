@@ -42,7 +42,7 @@ export default function Page() {
         <br /><br />
         <h1>{title}</h1>
         <div className="markdown">
-          <ReactMarkdown source={description} />
+          <ReactMarkdown>{description}</ReactMarkdown>
         </div>
         <br />
         <p className="text-gray-400">{`Date: ${date} - Time: ${time} · Post in localhost`}</p>
