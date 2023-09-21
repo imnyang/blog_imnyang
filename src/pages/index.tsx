@@ -1,6 +1,28 @@
 import BlogList from "@/components/BlogList";
+import { useState, useEffect } from 'react';
 
 export default function Home() {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // 화면 크기가 768px 이하인 경우 모바일로 간주
+    const isMobileScreen = window.innerWidth <= 768;
+
+    setIsMobile(isMobileScreen);
+
+    // 화면 크기가 변경될 때마다 확인
+    window.addEventListener('resize', () => {
+      setIsMobile(window.innerWidth <= 768);
+    });
+
+    return () => {
+      // 컴포넌트가 언마운트되면 리스너 제거
+      window.removeEventListener('resize', () => {
+        setIsMobile(window.innerWidth <= 768);
+      });
+    }
+  }, []);
+
   return (
     <main className="par_box">
       <div className="box">
@@ -21,7 +43,7 @@ export default function Home() {
         <br /><br /><br />
         <p className="text-gray-400">Now · Post in localhost</p>
       </div>
-      <div className="box ml-10">
+      <div className={`box ${isMobile ? '' : 'ml-10'}`}>
         <h1 className="ml-8 mt-10">Latest</h1>
         <BlogList />
       </div>
