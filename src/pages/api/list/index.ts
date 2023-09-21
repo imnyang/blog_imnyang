@@ -39,6 +39,10 @@ export default async function handler(
     return res.status(200).json(items);
   } catch (err) {
     // 오류 객체의 메시지를 포함시켜 JSON 응답으로 반환합니다.
-    return res.status(500).json({ error: err.message });
+    if (err instanceof Error) {
+      return res.status(500).json({ error: err.message });
+    } else {
+      return res.status(500).json({ error: 'An error occurred' });
+    }
   }
 }
