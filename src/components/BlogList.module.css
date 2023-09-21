@@ -1,0 +1,44 @@
+/* components/BlogList.module.css */
+
+.blogList {
+    display: flex;
+    margin: 26px;
+    list-style: none;
+    padding: 0;
+}
+
+.blogItem {
+    width: 80%;
+    height: 55px;
+    margin-bottom: 20px;
+    background: rgba(255, 255, 255, 1);
+    border: 2px solid #EFF3F4;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); /* 그림자 색상 및 크기 조정 가능 */
+}
+
+.blogTitle {
+  font-size: 24px;
+  margin: 0;
+}
+
+.blogDescription {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.blogInfo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.blogDate,
+.blogTime {
+  font-size: 14px;
+  width: 100%;
+  color: #888;
+}

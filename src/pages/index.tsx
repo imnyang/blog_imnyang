@@ -1,3 +1,5 @@
+import BlogList from "@/components/BlogList";
+
 export default function Home() {
   return (
     <main className="par_box">
@@ -18,6 +20,10 @@ export default function Home() {
         <p>@imnyang</p>
         <br /><br /><br />
         <p className="text-gray-400">Now · Post in localhost</p>
+      </div>
+      <div className="box ml-10">
+        <h1 className="ml-8 mt-10">Latest</h1>
+        <BlogList />
       </div>
     </main>
   )
